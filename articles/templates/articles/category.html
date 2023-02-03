@@ -1,0 +1,43 @@
+{% extends 'articles/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>{{cat.name}}</title>
+{% endblock %}
+
+{% block body %}
+    <div class="articles">
+    {% if articles %}
+        {% for article in articles %}
+            <div class="article">
+                <div class="article__header">
+                    <span class="article__header-body">
+                        <span class="article__header-item">{{article.name}}</span> by
+                        <span class="article__header-item">{{article.user}}</span>
+                        <br/>
+                        <span class="article__header-item">{{article.category.name}}</span>
+                    </span>
+                    <span>
+                        {{article.time_updated}}
+                    </span>
+                </div>
+                <div class="article__body">
+                    <div class="article__photo">
+                        <img src="{{article.photo.url}}" alt="Article photo">
+                    </div>
+                    <div class="article__text">
+                        {{article.text|truncatechars:500}}
+                    </div>
+                </div>
+                <div class="article__footer">
+                    <button class="article__footer-button btn btn-danger">
+                        <a href="{{ article.get_absolute_url }}">Read more</a>
+                    </button>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h1>There is no articles</h1>
+    {% endif %}
+    </div>
+{% endblock %}

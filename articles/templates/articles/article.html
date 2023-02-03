@@ -1,0 +1,28 @@
+{% extends 'articles/base.html' %}
+{% load static %}
+
+{% block title %}
+<title>{{article.name}}</title>
+{% endblock %}
+
+{% block body %}
+    <div class="art">
+        <div class="art__header">
+                <span class="art__header-body">
+                    <span class="art__header-item">{{article.name}}</span> by
+                    <span class="art__header-item">{{article.user}}</span>
+                    <br/>
+                    <span class="art__header-item">{{article.category.name}}</span>
+                </span>
+                <span>
+                    {{article.time_updated}}
+                </span>
+            </div>
+        <div class="art__content">
+            <img src="{{article.photo.url}}" alt="article image">
+<!--            {% autoescape on %}-->
+            {{article.text}}
+<!--	        {% endautoescape %}-->
+        </div>
+    </div>
+{% endblock %}

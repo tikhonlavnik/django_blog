@@ -1,0 +1,57 @@
+.form_wrapper {
+    margin-left: 1rem;
+/*    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;*/
+
+}
+
+/*form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-bottom: 5rem;
+}
+
+.form__item {
+    margin-top: 1.5rem;
+}
+
+.form__item-error {
+    color: red;
+}
+
+.form__item-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.form_textarea {
+    resize: none;
+    height: 15rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    margin-left: 1rem;
+}
+
+.form__button {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.form__button-button {
+    padding: 10px;
+    color: white;
+    background-color: rgb(245, 77, 76);
+    border-radius: 5px;
+    width: 7rem;
+    font-size: 14px;
+    border: 1px solid #000;
+    margin-top: 1rem;
+}*/
+
